@@ -1,6 +1,6 @@
+import app from "./app";
+
 Bun.serve({
-  fetch(req) {
-    return new Response("Hello via Bun Server");
-  },
+  fetch: app.fetch
 });
 console.log("Server Started");
